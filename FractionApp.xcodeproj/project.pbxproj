@@ -14,6 +14,9 @@
 		6BF70E851BB1DF0F0077748E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BF70E841BB1DF0F0077748E /* Images.xcassets */; };
 		6BF70E881BB1DF0F0077748E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF70E861BB1DF0F0077748E /* LaunchScreen.xib */; };
 		6BF70E941BB1DF0F0077748E /* FractionAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF70E931BB1DF0F0077748E /* FractionAppTests.m */; };
+		6BF70E9F1BB1E2D50077748E /* Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF70E9E1BB1E2D50077748E /* Fraction.m */; };
+		6BF70EA21BB1E3080077748E /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF70EA11BB1E3080077748E /* Calculator.m */; };
+		6BF70EA51BB1E4630077748E /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF70EA41BB1E4630077748E /* InputHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		6BF70E8D1BB1DF0F0077748E /* FractionAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FractionAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF70E921BB1DF0F0077748E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BF70E931BB1DF0F0077748E /* FractionAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FractionAppTests.m; sourceTree = "<group>"; };
+		6BF70E9D1BB1E2D50077748E /* Fraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
+		6BF70E9E1BB1E2D50077748E /* Fraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fraction.m; sourceTree = "<group>"; };
+		6BF70EA01BB1E3080077748E /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
+		6BF70EA11BB1E3080077748E /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
+		6BF70EA31BB1E4630077748E /* InputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
+		6BF70EA41BB1E4630077748E /* InputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +90,16 @@
 		6BF70E761BB1DF0F0077748E /* FractionApp */ = {
 			isa = PBXGroup;
 			children = (
+				6BF70EA01BB1E3080077748E /* Calculator.h */,
+				6BF70EA11BB1E3080077748E /* Calculator.m */,
+				6BF70E9D1BB1E2D50077748E /* Fraction.h */,
+				6BF70E9E1BB1E2D50077748E /* Fraction.m */,
 				6BF70E7B1BB1DF0F0077748E /* AppDelegate.h */,
 				6BF70E7C1BB1DF0F0077748E /* AppDelegate.m */,
 				6BF70E7E1BB1DF0F0077748E /* ViewController.h */,
 				6BF70E7F1BB1DF0F0077748E /* ViewController.m */,
+				6BF70EA31BB1E4630077748E /* InputHandler.h */,
+				6BF70EA41BB1E4630077748E /* InputHandler.m */,
 				6BF70E811BB1DF0F0077748E /* Main.storyboard */,
 				6BF70E841BB1DF0F0077748E /* Images.xcassets */,
 				6BF70E861BB1DF0F0077748E /* LaunchScreen.xib */,
@@ -220,8 +235,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BF70E801BB1DF0F0077748E /* ViewController.m in Sources */,
+				6BF70EA51BB1E4630077748E /* InputHandler.m in Sources */,
 				6BF70E7D1BB1DF0F0077748E /* AppDelegate.m in Sources */,
 				6BF70E7A1BB1DF0F0077748E /* main.m in Sources */,
+				6BF70E9F1BB1E2D50077748E /* Fraction.m in Sources */,
+				6BF70EA21BB1E3080077748E /* Calculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
