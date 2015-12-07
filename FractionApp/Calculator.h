@@ -13,7 +13,7 @@
     Fraction * accumulator;
 }
 
--(bool)process;
+//-(bool)process;
 -(bool)operate: (Fraction *) fraction with: (char) operation;
 -(void)addFraction: (Fraction *) fraction;
 -(void)subtractFraction: (Fraction *) fraction;
@@ -23,5 +23,6 @@
 -(Fraction *)accumulator;
 -(void)clear;
 -(void)simplify;
+-(void)setAccumulator: (Fraction *) fraction;
 
 @end

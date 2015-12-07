@@ -12,11 +12,11 @@
 #import "InputHandler.h"
 
 @interface ViewController ()
-@property Calculator * calc;
 @property InputHandler * handler;
 @property (weak, nonatomic) IBOutlet UILabel *inputLabel;
 @property (weak, nonatomic) IBOutlet UILabel *valueLabel;
 @property (weak, nonatomic) IBOutlet UILabel *decimalLabel;
+@property (weak, nonatomic) IBOutlet UILabel *parensLabel;
 
 @end
 
@@ -24,9 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _calc = [[Calculator alloc] init];
+    //Allocates and initializes the input handler
     _handler = [[InputHandler alloc] init];
-    _handler.calc = _calc;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -35,24 +34,33 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
+//Handles a button press of a number button
+//by sending the operation to the input handler
 -(void)handleNumber:(int)value{
     [_handler handleNumber:value];
     [self refresh];
 }
 
--(void)refresh{
-    _inputLabel.text = [_handler inputString];
-    _valueLabel.text = [_handler valueString];
-    _decimalLabel.text = [_handler decimalString];
-}
-
-
+//Handles a button press of an operation button
+//by sending the operation to the input handler
 -(void)handleOperation:(char)operation{
     [_handler handleOperation:operation];
     [self refresh];
 }
+
+//Set the text in the display to the current values
+//Finds the values in the input handler
+-(void)refresh{
+    _inputLabel.text = [_handler inputString];
+    _valueLabel.text = [_handler valueString];
+    _decimalLabel.text = [_handler decimalString];
+    _parensLabel.text = [_handler parensString];
+}
+
+
+//The following are all outlets for the buttons
+//They call either the handleNumber function
+//or the handleOperation function
 
 - (IBAction)buttonOne:(id)sender {
     [self handleNumber:1];
@@ -103,7 +111,13 @@
     [self handleOperation:'C'];
 }
 - (IBAction)buttonCalculate:(id)sender {
-     [self handleOperation:' '];
+    [self handleOperation:' '];
+}
+- (IBAction)buttonLeftParen:(id)sender {
+    [self handleOperation:'('];
+}
+- (IBAction)buttonRightParen:(id)sender {
+    [self handleOperation:')'];
 }
 
 

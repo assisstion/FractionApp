@@ -17,7 +17,8 @@
     return self;
 }
 
--(bool)process{
+//Unused method
+/*-(bool)process{
     
     int numerator;
     printf("Numerator: ");
@@ -45,7 +46,7 @@
     printf("Accumulator value: %i/%i\n", [accumulator numerator], [accumulator denominator]);
     return true;
     
-}
+}*/
 
 -(bool)operate: (Fraction *) fraction with: (char) operator{
     switch (operator) {
@@ -112,6 +113,9 @@
 }
 -(void)clear{
     accumulator = [Fraction with:0 and:1];
+}
+-(void)setAccumulator:(id)fraction{
+    accumulator = [Fraction with:[fraction numerator] and:[fraction denominator]];
 }
 
 @end
